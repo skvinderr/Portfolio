@@ -1,19 +1,31 @@
 <?php
-	if (isset($_POST["submit"])) {
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-		$message = $_POST['message'];
-		$from = 'Parax Contact Form'; 
-		$to = 'example@gmail.com'; 
-		$subject = $_POST['subject']; 
-		
-		$body = "From: $name\n E-Mail: $email\n Subject: $subject\n Message:\n $message";
-	
+if (isset($_POST["submit"])) {
+    // Sanitize inputs
+    $name = htmlspecialchars(trim($_POST['name']));
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $subject = htmlspecialchars(trim($_POST['subject']));
+    $message = htmlspecialchars(trim($_POST['message']));
 
-	mail($to, $subject, $body, $from) or die("Error!");
+    // Email setup
+    $to = 'sci.adityarjpt@gmail.com';
+    $from = "From: $name <$email>\r\n";
+    $body = "You have received a new message from your website contact form:\n\n".
+            "Name: $name\n".
+            "Email: $email\n".
+            "Subject: $subject\n".
+            "Message:\n$message";
 
-	header("location: thank-you.html");
-	
-	}
-	
+    // Validate email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die("Invalid email format.");
+    }
+
+    // Send email
+    if (mail($to, $subject, $body, $from)) {
+        header("Location: thank-you.html");
+        exit();
+    } else {
+        die("Mail sending failed.");
+    }
+}
 ?>

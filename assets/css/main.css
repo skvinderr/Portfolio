@@ -1068,3 +1068,463 @@ Start FunFacts CSS
 /* ==========================================================================
 11. End Footer Area
 ========================================================================== */
+
+
+/* ==========================================================================
+12. About section starts
+========================================================================== */
+.light_bg {
+	background-color: #000000;
+	color: #a79e9e;
+  }
+  .about-text p {
+	color: white;
+	font-size: 1.1rem;
+	line-height: 1.7;
+	margin-bottom: 1rem;
+  }
+
+/* ==========================================================================
+13. Projects Section Styles
+========================================================================== */
+.single-project {
+	transition: all 0.3s ease;
+	margin-bottom: 30px;
+}
+
+.project-thumb {
+	background: transparent;
+	-webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	overflow: hidden;
+	text-align: left;
+	position: relative;
+}
+
+.project-image {
+	position: relative;
+	overflow: hidden;
+}
+
+.project-image img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.project-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(8, 214, 101, 0.9);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.single-project:hover .project-overlay {
+	opacity: 1;
+}
+
+.single-project:hover .project-image img {
+	transform: scale(1.1);
+}
+
+.project-links {
+	text-align: center;
+}
+
+.project-btn {
+	margin: 5px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+.project-btn.btn-primary {
+	background-color: #333;
+	border-color: #333;
+	color: white;
+}
+
+.project-btn.btn-primary:hover {
+	background-color: #000;
+	border-color: #000;
+	transform: translateY(-2px);
+}
+
+.project-btn.btn-secondary {
+	background-color: #08d665;
+	border-color: #08d665;
+	color: white;
+}
+
+.project-btn.btn-secondary:hover {
+	background-color: #06b356;
+	border-color: #06b356;
+	transform: translateY(-2px);
+}
+
+.project-info {
+	padding: 25px;
+	background: #fff;
+}
+
+.light_bg .project-info {
+	background: #1a1a1a;
+	color: #fff;
+}
+
+.project-info h4 {
+	color: #222;
+	font-size: 20px;
+	margin-bottom: 15px;
+	font-weight: 600;
+}
+
+.light_bg .project-info h4 {
+	color: #fff;
+}
+
+.project-info p {
+	color: #666;
+	font-size: 14px;
+	line-height: 1.6;
+	margin-bottom: 15px;
+}
+
+.light_bg .project-info p {
+	color: #ccc;
+}
+
+.tech-stack {
+	margin-top: 15px;
+}
+
+.tech-tag {
+	display: inline-block;
+	background: #08d665;
+	color: white;
+	padding: 4px 12px;
+	border-radius: 15px;
+	font-size: 11px;
+	font-weight: 500;
+	margin: 2px 4px 2px 0;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.light_bg .tech-tag {
+	background: #333;
+	color: #08d665;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+	.project-btn {
+		display: block;
+		margin: 10px auto;
+		width: 80%;
+		text-align: center;
+	}
+	
+	.project-links {
+		padding: 0 20px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.single-project {
+		margin-bottom: 20px;
+	}
+	
+	.project-info {
+		padding: 20px;
+	}
+	
+	.project-info h4 {
+		font-size: 18px;
+	}
+}
+/* ==========================================================================
+13. End Projects Section Styles
+========================================================================== */
+
+/* ==========================================================================
+14. Skills Grid Styles
+========================================================================== */
+.skills-grid-container {
+	margin-top: 60px;
+}
+
+.skills-category-title {
+	color: #08d665;
+	font-size: 28px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 50px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.skills-category {
+	margin-bottom: 40px;
+}
+
+.category-label {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.skills-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	margin-bottom: 30px;
+}
+
+.skill-card {
+	background: #1a1a1a;
+	border: 2px solid #333;
+	border-radius: 12px;
+	padding: 20px 15px;
+	min-width: 120px;
+	text-align: center;
+	transition: all 0.3s ease;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	position: relative;
+	overflow: hidden;
+}
+
+.skill-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+	transition: left 0.5s ease;
+}
+
+.skill-card:hover::before {
+	left: 100%;
+}
+
+.skill-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.skill-icon {
+	font-size: 24px;
+	margin-bottom: 8px;
+	transition: all 0.3s ease;
+}
+
+.skill-name {
+	font-size: 12px;
+	font-weight: 600;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	transition: all 0.3s ease;
+}
+
+/* Category-specific colors */
+.skill-card.programming {
+	border-color: #e74c3c;
+}
+
+.skill-card.programming:hover {
+	border-color: #e74c3c;
+	box-shadow: 0 10px 25px rgba(231, 76, 60, 0.3);
+}
+
+.skill-card.programming .skill-icon {
+	color: #e74c3c;
+}
+
+.skill-card.programming:hover .skill-icon {
+	color: #c0392b;
+	transform: scale(1.2);
+}
+
+.skill-card.frontend {
+	border-color: #3498db;
+}
+
+.skill-card.frontend:hover {
+	border-color: #3498db;
+	box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+}
+
+.skill-card.frontend .skill-icon {
+	color: #3498db;
+}
+
+.skill-card.frontend:hover .skill-icon {
+	color: #2980b9;
+	transform: scale(1.2);
+}
+
+.skill-card.backend {
+	border-color: #f39c12;
+}
+
+.skill-card.backend:hover {
+	border-color: #f39c12;
+	box-shadow: 0 10px 25px rgba(243, 156, 18, 0.3);
+}
+
+.skill-card.backend .skill-icon {
+	color: #f39c12;
+}
+
+.skill-card.backend:hover .skill-icon {
+	color: #e67e22;
+	transform: scale(1.2);
+}
+
+.skill-card.cloud {
+	border-color: #9b59b6;
+}
+
+.skill-card.cloud:hover {
+	border-color: #9b59b6;
+	box-shadow: 0 10px 25px rgba(155, 89, 182, 0.3);
+}
+
+.skill-card.cloud .skill-icon {
+	color: #9b59b6;
+}
+
+.skill-card.cloud:hover .skill-icon {
+	color: #8e44ad;
+	transform: scale(1.2);
+}
+
+.skill-card.datascience {
+	border-color: #1abc9c;
+}
+
+.skill-card.datascience:hover {
+	border-color: #1abc9c;
+	box-shadow: 0 10px 25px rgba(26, 188, 156, 0.3);
+}
+
+.skill-card.datascience .skill-icon {
+	color: #1abc9c;
+}
+
+.skill-card.datascience:hover .skill-icon {
+	color: #16a085;
+	transform: scale(1.2);
+}
+
+.skill-card.tools {
+	border-color: #08d665;
+}
+
+.skill-card.tools:hover {
+	border-color: #08d665;
+	box-shadow: 0 10px 25px rgba(8, 214, 101, 0.3);
+}
+
+.skill-card.tools .skill-icon {
+	color: #08d665;
+}
+
+.skill-card.tools:hover .skill-icon {
+	color: #06b356;
+	transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+	.skills-row {
+		gap: 10px;
+	}
+	
+	.skill-card {
+		min-width: 100px;
+		height: 90px;
+		padding: 15px 10px;
+	}
+	
+	.skill-icon {
+		font-size: 20px;
+		margin-bottom: 6px;
+	}
+	
+	.skill-name {
+		font-size: 11px;
+	}
+	
+	.category-label {
+		font-size: 16px;
+	}
+	
+	.skills-category-title {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.skill-card {
+		min-width: 85px;
+		height: 80px;
+		padding: 12px 8px;
+	}
+	
+	.skill-icon {
+		font-size: 18px;
+		margin-bottom: 4px;
+	}
+	
+	.skill-name {
+		font-size: 10px;
+	}
+	
+	.skills-category {
+		margin-bottom: 30px;
+	}
+}
+
+/* Animation for skill cards */
+@keyframes skillCardPulse {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.05); }
+	100% { transform: scale(1); }
+}
+
+.skill-card:hover {
+	animation: skillCardPulse 0.6s ease-in-out;
+}
+
+/* ==========================================================================
+14. End Skills Grid Styles
+========================================================================== */
+  
