@@ -1,4 +1,4 @@
-# 🚀 Aditya Kumar Verma - Portfolio Website
+# 🚀 My Portfolio Website
 
 A modern, responsive personal portfolio website showcasing my skills, projects, and professional journey as a Software Engineer and Full-Stack Developer.
 
