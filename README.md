@@ -76,7 +76,6 @@ https://adicatechol.vercel.app/
 3. **View the website**
    - Open your browser and navigate to `http://localhost:8000`
 
-
 ## 📁 Project Structure
 
 ```
